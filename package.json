@@ -1,0 +1,33 @@
+{
+  "name": "xueqiu-api",
+  "version": "0.5.0",
+  "description": "A node.js wrapper for the [xueqiu](https://xueqiu.com/) api to fetch data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bellchet58/xueqiu-api.git"
+  },
+  "keywords": [
+    "axios",
+    "xueqiu",
+    "api"
+  ],
+  "author": "bellchet58",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bellchet58/xueqiu-api/issues"
+  },
+  "homepage": "https://github.com/bellchet58/xueqiu-api#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "global": "^4.4.0",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "jest": "^25.4.0"
+  }
+}
