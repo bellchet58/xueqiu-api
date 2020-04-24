@@ -1,5 +1,7 @@
+const init = require('../lib/init')
 const { camelCaseDeep } = require('../lib/request')
 
+const { finance } = init({ token: '这是token'})
 
 describe("finance related api", () => {
   test("test camelCase repsonse data", async () => {
@@ -7,4 +9,9 @@ describe("finance related api", () => {
     const result = camelCaseDeep(input)
     expect(result.data.list[0].basicEps[0]).toBe(0.22);
   });
+  test("mainIndex data", async () => {
+    const result = await finance.indicator({ scode: '603585'})
+    expect(result.list.length).toBe(5);
+  }, 20000);
+
 });
