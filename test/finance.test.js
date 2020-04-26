@@ -1,7 +1,7 @@
 const init = require('../lib/init')
 const { camelCaseDeep } = require('../lib/request')
 
-const { finance } = init({ token: '这是token'})
+const { finance } = init({ token: '48575b79f8efa6d34166cc7bdc5abb09fd83ce63'})
 
 describe("finance related api", () => {
   test("test camelCase repsonse data", async () => {
@@ -13,5 +13,22 @@ describe("finance related api", () => {
     const result = await finance.indicator({ scode: '603585'})
     expect(result.list.length).toBe(5);
   }, 20000);
+  test("income data", async () => {
+    const result = await finance.income({ scode: '603585'})
+    expect(result.list.length).toBe(5);
+  }, 20000);
+  test("balance data", async () => {
+    const result = await finance.balance({ scode: '603585'})
+    expect(result.list.length).toBe(5);
+  }, 20000);
+  test("cashFlow data", async () => {
+    const result = await finance.cashFlow({ scode: '603585'})
+    expect(result.list.length).toBe(5);
+  }, 20000);
+
+  test("get 20 years mainIndex data", async () => {
+    const result = await finance.getLimitRecords(finance.indicator.bind(finance), { scode: '603585' }, 20)
+    expect(result.length).toBe(9);
+  })
 
 });
