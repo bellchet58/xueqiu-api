@@ -2,7 +2,7 @@
   "name": "xueqiu-api",
   "version": "0.5.0",
   "description": "A node.js wrapper for the [xueqiu](https://xueqiu.com/) api to fetch data.",
-  "main": "index.js",
+  "main": "lib/init.js",
   "scripts": {
     "test": "jest"
   },
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/bellchet58/xueqiu-api#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios-extra": "^0.0.5",
     "global": "^4.4.0",
     "lodash": "^4.17.15",
     "qs": "^6.9.3"

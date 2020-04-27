@@ -11,20 +11,24 @@ describe("finance related api", () => {
   });
   test("mainIndex data", async () => {
     const result = await finance.indicator({ scode: '603585'})
-    expect(result.list.length).toBe(5);
+    expect(result.length).toBe(5);
   }, 20000);
   test("income data", async () => {
     const result = await finance.income({ scode: '603585'})
-    expect(result.list.length).toBe(5);
+    expect(result.length).toBe(5);
   }, 20000);
   test("balance data", async () => {
     const result = await finance.balance({ scode: '603585'})
-    expect(result.list.length).toBe(5);
+    expect(result.length).toBe(5);
   }, 20000);
   test("cashFlow data", async () => {
     const result = await finance.cashFlow({ scode: '603585'})
-    expect(result.list.length).toBe(5);
+    expect(result.length).toBe(5);
   }, 20000);
+  test('business data', async() => {
+    const result = await finance.business({ scode: '603585'})
+    expect(result.length).toBe(5);
+  })
 
   test("get 20 years mainIndex data", async () => {
     const result = await finance.getLimitRecords(finance.indicator.bind(finance), { scode: '603585' }, 20)

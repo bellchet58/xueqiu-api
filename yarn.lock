@@ -689,12 +689,21 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.9.1.tgz#7e33d8f7d449b3f673cd72deb9abdc552dbe528e"
   integrity sha512-wMHVg2EOHaMRxbzgFJ9gtjOOCrI80OHLG14rxi28XwOW8ux6IiEbRCGGGqCtdAIg4FQCbW20k9RsT4y3gJlFug==
 
-axios@^0.19.2:
-  version "0.19.2"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
-  integrity sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
+axios-extra@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/axios-extra/-/axios-extra-0.0.5.tgz#e95139de5d59e355e7618420c5ada855714738b4"
+  integrity sha512-cCH0ba/AuCKFurYfQtYf91Ex2cv5kpOq+vTrxzj2LrmiznJ71a0cYKUu9Pvll/gmRv0XSty8fcoYJ71dN8Mr9A==
+  dependencies:
+    axios "^0.18.0"
+    promise-queue-plus "^1.2.2"
+
+axios@^0.18.0:
+  version "0.18.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.1.tgz#ff3f0de2e7b5d180e757ad98000f1081b87bcea3"
+  integrity sha512-0BfJq4NSfQXd+SkFdrvFbG7addhYSBA2mQwISr46pD6E5iqkWg02RAs8vyTT/j0RTnoYmeXauBuSv1qKwR179g==
   dependencies:
     follow-redirects "1.5.10"
+    is-buffer "^2.0.2"
 
 babel-jest@^25.4.0:
   version "25.4.0"
@@ -775,6 +784,11 @@ bcrypt-pbkdf@^1.0.0:
   integrity sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
   dependencies:
     tweetnacl "^0.14.3"
+
+bluebird@^3.0.0:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
+  integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -1135,6 +1149,11 @@ domexception@^1.0.1:
   dependencies:
     webidl-conversions "^4.0.2"
 
+easy-promise@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/easy-promise/-/easy-promise-0.1.0.tgz#a3c4215a0e221482b0421971cb005a2474fc1868"
+  integrity sha512-QfpuGzp/vH9m7j4DXjDWHhI4Ef/IJKQGkN/DsHoUjYAqTWSrIQ+yukwkz8tIvffsgLg2dFfvida0/s+eer220A==
+
 ecc-jsbn@~0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz#3a83a904e54353287874c564b7549386849a98c9"
@@ -1257,6 +1276,11 @@ expect@^25.4.0:
     jest-matcher-utils "^25.4.0"
     jest-message-util "^25.4.0"
     jest-regex-util "^25.2.6"
+
+extend-promise@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/extend-promise/-/extend-promise-0.0.7.tgz#037388c36f25e5f8ebc0fe38100b9e2ce7be3911"
+  integrity sha512-FLka6uzfpK6aPX0CYwb+wiWd6D/2W4Hg2GOD6j0QHAA/l6GCBUQ8MoWaFkvxyJiMpk92XeIgHgTLAsfcoZiIYg==
 
 extend-shallow@^2.0.1:
   version "2.0.1"
@@ -1609,6 +1633,11 @@ is-buffer@^1.1.5:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
+
+is-buffer@^2.0.2:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-2.0.4.tgz#3e572f23c8411a5cfd9557c849e3665e0b290623"
+  integrity sha512-Kq1rokWXOPXWuaMAqZiJW4XxsmD9zGx9q4aePabbn3qCRGedtH7Cm+zV8WETitMfu1wdh+Rvd6w5egwSngUX2A==
 
 is-ci@^2.0.0:
   version "2.0.0"
@@ -2690,6 +2719,15 @@ process@^0.11.10:
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
+
+promise-queue-plus@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/promise-queue-plus/-/promise-queue-plus-1.2.2.tgz#b64e7b55592e8c4791bce22f67835113812ac7a0"
+  integrity sha512-As9heS6Jv7BpPmNd8aUAOHwCsK6khqEIb5UqwXHHJia6KKrnSPNC4sQRhDEh8MnEIE7ydOygzCs6buPEsotwaQ==
+  dependencies:
+    bluebird "^3.0.0"
+    easy-promise "0.1.0"
+    extend-promise "^0.0.7"
 
 prompts@^2.0.1:
   version "2.3.2"
