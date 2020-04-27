@@ -1,7 +1,7 @@
 # xueqiu-api
 A node.js wrapper for the [xueqiu](https://xueqiu.com/)  api to fetch data.
 
-> 雪球APP Node.js API (暂时需要自取token)
+> 雪球APP Node.js API
 
 ## 快速指引
 
@@ -15,11 +15,15 @@ npm install xueqiu-api
 
 ```javascript
 const XueqiuInit = require('xueqiu-api')
-const { finance, f10 } = init({ token: '这是token' })
+const { finance, f10 } = init({ token: '这是token(可选)' })
 const indicator = await finance.indicator({ scode: '603585', type: 'Q4'})  //获取主要指标
 ```
 
-调用API前需要手动获取雪球网站的token,使用set_token设置token后才能访问雪球的API。
+构造参数：
+* token -> 可选，若不提供可自动通过`puppeteer`获取`httpOnly`的`cookie`的功能。
+* maxConcurrent -> 并发数。默认1
+* retry -> 请求失败后的重试次数。默认3
+* retryIsJump -> 是否立即重试, 否则将在请求队列尾部插入重试请求。默认false
 
 ## APIs
 1. 请求参数、响应格式中的`key`都是自动转成用`camelCase`表示的。
@@ -28,6 +32,7 @@ const indicator = await finance.indicator({ scode: '603585', type: 'Q4'})  //获
 const result = await finance.getLimitRecords(finance.indicator.bind(finance), { scode: '603585' }, 20)
 // 返回近20年的业绩指标数据
 ```
+
 ### 业绩指标
 
 按年度、季度获取业绩报表数据。
