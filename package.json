@@ -1,6 +1,6 @@
 {
   "name": "xueqiu-api",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A node.js wrapper for the [xueqiu](https://xueqiu.com/) api to fetch data.",
   "main": "lib/init.js",
   "scripts": {
